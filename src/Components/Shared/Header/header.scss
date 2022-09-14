@@ -1,0 +1,117 @@
+header{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding: 3rem 0;
+    // background-color: rgba(22,18,42,.1);
+    // -webkit-backdrop-filter: saturate(90%) blur(1px);
+    // backdrop-filter: saturate(90%) blur(1px);
+    &.innerHeader{
+        position: relative;
+    }
+    .logo{
+        width: 8rem;
+        img{
+            width: 100%;
+        }
+    }
+    .responsive_right_details{
+        display: none;
+    }
+    .main_nav{
+        padding-left: 2.5rem;
+        li{
+            color: var(--OffWhite);
+            margin-right: 2.5rem;
+        }
+    }
+    .search_area{
+        position: relative;
+        .text_field{
+            width: 35.6rem;
+            height: 4.8rem;
+            background-color: var(--DarkColor2);
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            padding: 0 2rem 0 6rem;
+            color: var(--OffWhite);
+            -webkit-backdrop-filter: saturate(90%) blur(1px);
+            backdrop-filter: saturate(90%) blur(1px);
+            font-size: 1.6rem;
+        }
+        .material-icons{
+            color: var(--OffWhite);
+            position: absolute;
+            top: .9rem;
+            left: 1.7rem;
+            font-size: 3rem;
+        }
+        
+        
+    }
+    .right_details{
+        .custom_button{
+            margin-right: 2.5rem;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:779px){
+    header {
+        .search_area {
+            display: none;
+        }
+        .custom_button{
+            .material-icons{
+                font-size: 3rem;
+            }
+        }
+        .main_nav{
+            display: none;
+        }
+        .right_details{
+            display: none;
+        }
+        .responsive_right_details{
+            display: flex;
+            .custom_button{
+                
+                &:last-child{
+                    margin-right: 0;
+                    a{
+                        background-color: var(--TernaryColor);
+                        &::before{
+                            display: block;
+                            &:hover{
+                                &::before{
+                                    background-color: var(--SecondaryColor);
+                                }
+                            }
+                        }
+                    }
+                }
+                a{
+                    background-color: transparent;
+                    padding: 1rem;
+                    .material-icons{
+                        margin-right: 0;
+                    }
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .left_details{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+

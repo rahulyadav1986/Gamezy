@@ -1,0 +1,139 @@
+.trending_games{
+    width: 100%;
+    margin-bottom: 10rem;
+    .material-icons{
+        font-size: 3rem;
+    }
+    
+    .gamelist{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        li{
+            width: 100%;
+                
+            height: auto;
+            position: relative;
+            cursor: pointer;
+        }
+        img{
+            width: 100%;
+            height: 25rem;
+            border-radius: 8px; 
+            object-fit: cover;
+            display: block;
+        }
+       
+    }
+}
+
+.game_pop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    align-items: center;
+    display: flex;
+    .next_prev_button{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ddd;
+        color: #000;
+        &.next{
+            left: auto;
+            right: 0;
+        }
+    }
+    .overlay{
+        position: fixed;
+        background-color: rgba(9, 11, 32, .9);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: "";
+        z-index: -1;
+    }
+    .details{
+        width: 50rem;
+        background-color: var(--OffWhite);
+        padding: 0;
+        border-radius: 8px;
+        box-shadow: rgba(0,0,0,1) 1px 0 20px;
+        position: relative;
+        .content_details{
+            padding: 3rem;
+        }
+        .close_button{
+            position: absolute;
+            top: -7rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: var(--SecondaryColor);
+            border-radius: 100%;
+            width: 5rem;
+            height: 5rem;
+            border: none;
+            color: #fff;
+            box-shadow: rgba(0,0,0,.3) 1px 0 5px;
+            cursor: pointer;
+            font-size: 2rem;
+
+        }
+        h3{
+            color: var(--SecondaryColor);
+            margin-bottom: 1rem;
+        }
+        img{
+            width: 100%;
+            display: block;
+            border-radius: 8px 8px 0 0;
+        }
+        p{
+            margin-bottom: 2rem;
+        }
+        .custom_button{
+            display: inline-flex;
+            .material-icons{
+                font-size: 3rem;
+            }
+        }
+        
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 779px){
+    .trending_games {
+        .gamelist{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+  }
+
+  @media only screen and (max-width: 450px){
+    .trending_games {
+        .gamelist{
+            
+            img{
+                height: 17rem;
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 360px){
+    .game_pop .details{
+        width: 40rem;
+    }
+  }
