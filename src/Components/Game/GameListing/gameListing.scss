@@ -1,0 +1,64 @@
+.gamelisting_wrap{
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    .game_list_back{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        li{
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+            .content_area{
+                background-color: var(--DarkColor2);
+                padding: 2rem;
+                h3{
+                    color: var(--OffWhite);
+                    margin-bottom: 1.5rem;
+                    font-size: 1.8rem;
+                }
+                p{
+                    color: rgba(255,255,255,.3);
+                    font-size: 14px;
+                }
+                .date_pub{
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+                    .opec_color{
+                        color: rgba(255,255,255,.3);
+                        font-size: 12px;
+                        span{
+                            color: var(--SecondaryColor);
+                        }
+                    }
+                }
+                .custom_button{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:992px){
+    .gamelisting_wrap{  
+        .game_list_back{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    .gamelisting_wrap{  
+        .game_list_back{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

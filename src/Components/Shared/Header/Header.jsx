@@ -13,7 +13,7 @@ const Header = () => {
                         <div className="left_details d-flex align-center">
                             <div className="logo"><Link to="/"><img src="assets/images/logo.png" alt="" /></Link></div>
                             <ul className="main_nav d-flex align-center">
-                                <li><Link to="/">Explore</Link></li>
+                                <li><Link to="/games">Explore</Link></li>
                                 <li><Link to="/">Releases</Link></li>
                             </ul>
                             <div className="responsive_right_details">
@@ -38,12 +38,12 @@ const Header = () => {
     }
     return (
         <>
-            <header className='innerHeader'>
+            <header className="innerHeader">
                 <div className="container d-flex align-center justify-between">
                     <div className="left_details d-flex align-center">
                         <div className="logo"><Link to="/"><img src="assets/images/logo.png" alt="" /></Link></div>
                         <ul className="main_nav d-flex align-center">
-                            <li><Link to="/">Explore</Link></li>
+                            <li><Link to="/games">Explore</Link></li>
                             <li><Link to="/">Releases</Link></li>
                         </ul>
                         <div className="responsive_right_details">

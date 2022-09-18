@@ -1,0 +1,104 @@
+.new_games_wrapper {
+    width: 100%;
+    padding: 3rem 0;
+    min-height: 100rem;
+
+    .game_summery {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% auto;
+        grid-gap: 3rem;
+        margin-bottom: 3rem;
+
+        .left {
+            width: 100%;
+
+            img {
+                width: 100%;
+                box-shadow: rgba(0, 0, 0, .4) 1px 0 10px;
+                margin-bottom: 2rem;
+                border-radius: 8px;
+            }
+
+            .button_wrapper {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 20% auto;
+                grid-gap: 2rem;
+                .free_button {
+                    background-color: var(--DarkColor2);
+                    color: var(--OffWhite);
+                    border-radius: 5px;
+                    font-size: 1.2rem;
+                    text-align: center;
+                    width: 100%;
+                    height: 4rem;
+                    line-height: 4rem;
+                }
+
+                a {
+                    background-color: var(--TernaryColor);
+                    color: var(--OffWhite);
+                    border-radius: 5px;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    text-align: center;
+                    width: 100%;
+                    height: 4rem;
+                    line-height: 4rem;
+                }
+            }
+        }
+
+        .right{
+            width: 100%;
+            h1{
+                font-size: 4rem;
+                color: var(--OffWhite);
+                margin-bottom: 3rem;
+            }
+            h2{
+                color: var(--OffWhite);
+                margin-bottom: 2rem;
+            }
+            .tag_details{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2rem;
+                li{
+                    strong{
+                        display: block;
+                        color: var(--PrimaryColor);
+                        text-transform: uppercase;
+                        margin-bottom: 1rem;
+                    }
+                    color: var(--OffWhite);
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .game_extra_details{
+        h2{
+            color: var(--OffWhite);
+            margin-bottom: 2rem;
+        }
+        p{
+            color: var(--OffWhite);
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 14px;
+            height: 5rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            &.active{
+                height: auto;
+            }
+        }
+        .more{
+            color: var(--OffWhite);
+            cursor: pointer;
+        }
+    }
+}

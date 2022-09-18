@@ -31,7 +31,7 @@ const TrandingGames = () => {
                 <div className="container">
                     <div className="heading d-flex align-center justify-between">
                         <h2>Currently <span>Trending</span> games</h2>
-                        <IconButton url="/" icon="arrow_circle_right" title="Explore All" />
+                        <IconButton url="/games" icon="arrow_circle_right" title="Explore All" />
                     </div>
                     
                     <ul className="gamelist">

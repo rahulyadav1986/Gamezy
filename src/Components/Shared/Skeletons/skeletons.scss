@@ -3,6 +3,11 @@
     height: 25rem;
     border-radius: 8px !important;
 }
+.skelbox2{
+    width: 100% !important;
+    height: 21.4rem;
+}
+
 
 .skeltag{
     width: 30% !important;
@@ -25,6 +30,22 @@
     margin-top: 1rem;
 
 }
+
+.game_summery{
+    .skelheading{
+        height: 3rem;
+        margin-bottom: 3rem;
+    }
+    .skeltag{
+        margin-bottom: 0;
+    }
+    .button_wrapper{
+        .skelbutton{
+            width: 100% !important;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 450px){
     .skelbox{
