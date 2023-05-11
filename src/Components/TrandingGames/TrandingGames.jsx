@@ -3,14 +3,21 @@ import { IconButton } from "../Shared/Buttons/Buttons";
 
 import './trendingames.scss';
 import { ImageSkeleton } from "../Shared/Skeletons/Skeletons";
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '74ff21f793mshfb4a5f778d00548p1ea89bjsn1b638d79e405',
+		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+	}
+};
 const TrandingGames = () => {
-    const url = "https://www.freetogame.com/api/games";
+    const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
     const [trendingGameList, setTrendingGameList] = useState([]);
     const [tradentingLoader, setTradentingLoader] = useState(false);
     const [getPoptrendingGameList, setgetPoptrendingGameList] = useState(false);
     const getTrendingGameList = async () => {
         setTradentingLoader(true);
-        const response = await fetch(url);
+        const response = await fetch(url, options);
         const actualUrl = await response.json();
         setTrendingGameList(actualUrl);
         console.log(response);

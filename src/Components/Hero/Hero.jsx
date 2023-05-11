@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { IconButton } from '../Shared/Buttons/Buttons';
+import { AiFillAlipayCircle, IconButton } from '../Shared/Buttons/Buttons';
 import './hero.scss';
 const Hero = () => {
     return (

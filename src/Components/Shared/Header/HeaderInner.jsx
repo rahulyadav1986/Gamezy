@@ -1,4 +1,4 @@
-import './header.scss';
+import headerStyle from './header.module.scss';
 import MaterialIcon from 'material-icons-react';
 import { IconButton } from '../Buttons/Buttons';
 import { Link } from 'react-router-dom';

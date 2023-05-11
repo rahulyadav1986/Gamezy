@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Games from './Pages/Games';
 import GameId from './Pages/Games/gameId';
 import Home from './Pages/Home';
@@ -9,8 +9,9 @@ const RouterOutlet = ()=>{
     <>
       <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/games" element={<Games />} />
+          {/* <Route exact path="/games" element={<Games />} /> */}
           <Route exact path="/games/:id" element={<GameId />} />
+          <Route path='/games' element={<Navigate to='/' />} />
           <Route path="*" element={<NotFound />} />
       </Routes>
     </>

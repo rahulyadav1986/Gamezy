@@ -6,12 +6,18 @@ import Hero from "../../Components/Hero/Hero"
 import NewGames from "../../Components/Newgames/newgames";
 import { IconButton } from "../../Components/Shared/Buttons/Buttons";
 import TrandingGames from "../../Components/TrandingGames/TrandingGames";
-
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '74ff21f793mshfb4a5f778d00548p1ea89bjsn1b638d79e405',
+		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+	}
+};
 const Home = ()=>{
-    const url = "https://www.freetogame.com/api/games";
+    const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
     const [gameList, setGameList] = useState([]);
     const getGames = async () => {
-        const response = await fetch(url);
+        const response = await fetch(url, options);
         const actualUrl = await response.json();
         setGameList(actualUrl);
     }

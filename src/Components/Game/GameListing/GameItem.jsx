@@ -10,6 +10,7 @@ const GameItem = ({item}) => {
                     </div>
                 </div>
                 <h3>{item.title}</h3>
+                <p>{`${item.short_description.substring(0, 80)}...`}</p>
             </div>
         </>
     )

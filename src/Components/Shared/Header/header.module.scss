@@ -45,7 +45,10 @@ header{
         .material-icons{
             color: var(--OffWhite);
             position: absolute;
-            top: .9rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 2.4rem;
             left: 1.7rem;
             font-size: 3rem;
         }
